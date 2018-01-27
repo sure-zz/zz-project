@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
 import comptentA from '../components/comptentA'
+import storeDemo from '../components/storeDemo'
 Vue.use(Router)
 
 export default new Router({
@@ -15,6 +16,11 @@ export default new Router({
       path: '/c',
       name: 'comptentA',
       component: comptentA
+    },
+    {
+      path: '/store',
+      name: 'storeDemo',
+      component: storeDemo
     }
   ]
 })
