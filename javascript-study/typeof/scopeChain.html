@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta. http-equiv=”Expires” CONTENT=” Fri, 30 Oct 1998 14:19:41″>
+	<title>作用域</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//立即执行垃圾收集
+		window.collectGarbage();
+		//
+		var color="blue";
+		function changecolor(){
+			var anothercolor='red';
+			function swapColors(){
+				var tempcolor=anothercolor;
+				anothercolor=color;
+				color=tempcolor;
+				//这里能够方问 tempcolor   anothercolor  color
+			}
+				swapColors();
+
+			   //这里能够方问 anothercolor  color 但是不能访问 tempcolor
+		}
+		
+
+	</script>
+</body>
+</html>
