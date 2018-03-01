@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>watch</title>
+</head>
+<body>
+   <h1>component-1</h1>
+   <div id="app">
+       <p>今日漫度：{{wendu}}</p>
+       <p>今日漫度：{{chuangyi}}</p>
+       <p><button @click="shenggao">升高</button></p>
+   </div>   
+<style type="text/css">
+	div{
+		flex-direction: column ;
+		flex-direction:row;
+		flex-direction: row-reverse;
+		flex-direction: column-reverse;
+		justify-content:space-around;
+		flex-wrap:wrap;
+		flex-wrap:nowrap;
+		flex-wrap:wrap-reverse;
+	}
+</style>
+  
+   <script type="text/javascript">
+   	  
+
+   	   	 
+   	   var app=new Vue({
+            el:#app,
+            data:{
+            	message:'hellow world',
+            	who:'componentb',
+            	wendu:14,
+            	chuangyi:'夹克长裙'
+            },
+            methods:{
+            	shenggao:function(){
+            		this.wendu+=5;
+            	},
+            	jiangdi:function(){
+            		this.wendu-=5;
+            	}
+            },
+            watch:{
+            	wendu:function(newval,olaval){
+            		if(newval>=26){
+            			this.chuangyi="dfas";
+            		}else if(newval<26){
+            			this.chuangyi="adfadf";
+            		}
+            	}
+            }
+        })
+
+   </script>
+</body>
+</html>
